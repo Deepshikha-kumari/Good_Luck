@@ -1,0 +1,174 @@
+<!-- <p>pricing works!</p> -->
+<!-- <!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+
+<head>
+<meta charset="utf-8">
+<title>Packages </title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link href="css/bootstrap-margin-padding.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+
+</head>
+
+<body> -->
+<div class="page-wrapper">
+ 	
+    <!-- Preloader -->
+    <!-- <div class="preloader"></div> -->
+ 	
+    <!-- Main Header -->
+
+    <!--End Main Header -->
+    
+    
+    <!--Page Title-->
+    <section class="page-title" style="background:url('assets/images/background/page-title-1.jpg')">
+        <div class="auto-container">
+            <h1>Our Pricing</h1>
+            
+            <ul class="bread-crumb">
+            	<li><a href="index.html">Home</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+            
+        </div>
+        
+        <!--Go Down Button-->
+        <div class="go-down">
+            <div class="curve scroll-to-target" data-target="#about-section"><span class="icon fa fa-arrow-down"></span></div>
+        </div>
+        
+    </section>
+
+    <!-- Pricing Section -->
+    <section data-bg-color="#f7f7f7">
+        <div class="container">
+            <div class="row sm-width5-center">
+                <div class="col-md-4"  *ngFor="let pro of lstproject2">
+                    <div class="pricing-table mt-60">
+                        <div class="pricing-header">
+                            <div class="thumb">
+                                <img class="img-responsive img-fullwidth" [src]="pro.image!= null ? url+pro.image :'assets/images/resource/pricing-img-1.jpg'"   alt="">
+                            </div>
+                            <div class="package-price">
+                                {{pro.discount}}<br> <span>Discount</span>
+                            </div>
+                        </div>
+                        <div class="pricing-title"> {{pro.name}}</div>
+                        <div class="pricing-feature">
+                            <ul>
+                                <li> {{pro.key1}}</li>
+                                <li>{{pro.key2}}</li>
+                                <li>{{pro.key3}}</li>
+                                <li>{{pro.key4}}</li>
+                                <li>{{pro.key5}}</li>
+                                <li>{{pro.key6}}</li>
+                            </ul>
+                        </div>
+                        <div class="text-center"><a class="btn thm-btn btn-block bdrs-0 p-20 font-16" href="pricing.html">GET DISCOUNT</a></div>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </section>
+
+    
+    <!--Start Our Department Areas-->
+    <section>
+        <div class="container-fluid pb-35">
+            <div class="sec-title">
+                <h3>WE CARE OUR FEATURE SUPPORT</h3>
+                <h2>OUR FEATURE SERVICE</h2>
+                <div class="line"></div>
+            </div>
+            <div class="sec-content mt-50">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"   *ngFor="let proj of project2">
+                        <div class="department">
+                            <div class="thumb">
+                                <img class="img-responsive img-fullwidth"[src]="proj.image!= null ? url2+proj.image :'assets/images/resource/featured-image-4.jpg'"  alt="">
+                            </div>
+                            <div class="department-details">
+                                <div class="round-style"></div>
+                                <i class="icon flaticon-roses-bouquet"></i>
+                                <h4 class="title"> {{proj.name}}</h4>
+                                <p class="details pt-5">{{proj.description}}</p>
+                                 <a href="#donation-form" class="thm-btn btn-xs mr-5"><i class="fa fa-angle-double-right"></i> Read More</a>
+                                 <a class="thm-btn inverse btn-xs" href="#"><i class="fa fa-heart"></i> Support</a>
+                            </div>
+                        </div>
+                    </div>
+                 
+                </div>              
+            </div>
+        </div>
+    </section>
+
+    
+    <!--Fact Counter-->
+    <!-- <section class="fact-counter">
+        <div class="auto-container">
+            <div class="row clearfix">
+                
+                
+                <article class="col-md-3 col-sm-6 col-xs-12 column wow fadeIn" data-wow-duration="0ms">
+                    <div class="count-outer"><span class="count-text" data-speed="700" data-stop="1500">0</span></div>
+                    <div class="line"></div>
+                    <h4 class="counter-title">SUCCESSFULL PROJECT</h4>
+                </article>
+                
+                
+                <article class="col-md-3 col-sm-6 col-xs-12 column wow fadeIn" data-wow-duration="0ms">
+                    <div class="count-outer"><span class="count-text" data-speed="2000" data-stop="9108">0</span></div>
+                    <div class="line"></div>
+                    <h4 class="counter-title">HAPPY PEOPLE</h4>
+                </article>
+                
+                
+                <article class="col-md-3 col-sm-6 col-xs-12 column wow fadeIn" data-wow-duration="0ms">
+                    <div class="count-outer"><span class="count-text" data-speed="500" data-stop="80">0</span></div>
+                    <div class="line"></div>
+                    <h4 class="counter-title">AWARD WINNING</h4>
+                </article>
+                
+                
+                <article class="col-md-3 col-sm-6 col-xs-12 column wow fadeIn" data-wow-duration="0ms">
+                    <div class="count-outer"><span class="count-text" data-speed="1200" data-stop="619">0</span></div>
+                    <div class="line"></div>
+                    <h4 class="counter-title">RUNNING PROJECT</h4>
+                </article>
+                
+            </div>
+        </div>
+    </section> -->
+    
+    
+    <!--Main Footer-->
+
+    
+    
+</div>
+<!--End pagewrapper-->
+
+<!--Scroll to top-->
+<!-- <div class="scroll-to-top scroll-to-target" data-target="#main-header"><span class="fa fa-arrow-up"></span></div>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/revolution.min.js"></script>
+<script src="js/js-collection.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+
+
+</html> -->
+

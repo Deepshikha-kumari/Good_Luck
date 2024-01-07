@@ -1,0 +1,114 @@
+  <!--Page Title-->
+  <section class="page-title" style="background:url('assets/images/background/page-title-1.jpg')">
+    <div class="auto-container">
+        <h1>Login </h1>
+        
+        <ul class="bread-crumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Login </a></li>
+        </ul>
+        
+    </div>
+    
+    <!--Go Down Button-->
+    <div class="go-down">
+        <div class="curve scroll-to-target" data-target="#about-section"><span class="icon fa fa-arrow-down"></span></div>
+    </div>
+    
+</section>
+
+
+<!--About Section-->
+<section class="about-section" id="about-section">
+    <!--Desc Box-->
+    <div class="desc-box">
+        <div class="auto-container">
+            <div class="sec-title no-underline">
+                <h3>Good luck Marriage Login</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </div>	
+   
+    <!--Lower Content-->
+    <div class="lower-content" data-bg-img="assets/images/background/bg-pattern.png">
+        <div class="auto-container">
+            <div class="content-box">
+                <div class="row clearfix">
+                    
+                    <div class="col-md-7">
+                      <h4 class="text-thm title-border font-weight-700 mt-0 mb-10">Fill Up The Login</h4>
+                      <p class="mb-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro similique ipsa deleniti doloribus fuga dicta id voluptate, excepturi nostrum cupiditate</p>
+
+                      <!-- Appointment Form Sart-->
+                      <form #logForm='ngForm' (ngSubmit)="submitFormData(logForm.value)"   class="form-transparent mt-30" method="post" action="#">
+                        
+                        <div class="row">
+                             <div class="col-sm-12">
+                            <div class="form-group mb-20">
+                              <input data-height="45px" id="rsvp_name"  class="form-control bdrs-0" type="text" required="" placeholder="User Name" aria-required="true" name="username" ngModel required
+                              #username="ngModel">
+                            </div>
+                          </div> 
+                          <div class="col-sm-12">
+                            <div class="form-group mb-20">
+                              <input data-height="45px" id="rsvp_email"  class="form-control bdrs-0 required email" type="password" placeholder="Password" aria-required="true" name="password" ngModel required
+                              #password="ngModel">
+                            </div>
+                          </div>
+                         
+                        
+                              
+                        </div>
+                        
+                       <!--  <div class="form-group mb-20">
+                          <textarea id="form_message" name="form_message" class="form-control bdrs-0 required" data-height="120px" placeholder="Enter Message" rows="5" aria-required="true"></textarea>
+                        </div> -->
+                        <div class="form-group mb-0 mt-20">
+                          <input id="form_botcheck" name="form_botcheck" class="form-control bdrs-0" type="hidden" value="">
+                          <button type="submit" class="btn thm-btn btn-flat" data-loading-text="Please wait...">Submit Now</button><br><br>
+                          <a routerLink="signin">
+                               <div  class="btn thm-btn btn-flat" >Signup</div>
+                          </a>
+                        </div>
+                      </form>
+                      <!-- Appointment Form Validation-->
+                      <script type="text/javascript">
+                            $("#appointment_form").validate({
+                              submitHandler: function(form) {
+                                var form_btn = $(form).find('button[type="submit"]');
+                                var form_result_div = '#form-result';
+                                $(form_result_div).remove();
+                                form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+                                var form_btn_old_msg = form_btn.html();
+                                form_btn.html(form_btn.data("loading-text"));
+                                $(form).ajaxSubmit({
+                                  target: form_result_div,
+                                  success: function(data) {
+                                    form_btn.html(form_btn_old_msg);
+                                    $(form).find('.form-control').val('');
+                                    $(form_result_div).fadeIn('slow');
+                                    setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
+                                  }
+                                });
+                              }
+                            });
+                      </script>
+                      <!-- Appointment Form Ends -->
+
+                    </div>
+                    <div class="col-md-5">
+                      <img alt="" src="assets/images/resource/image-forlift2.png" class="img-responsive img-fullwidth">
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>         
+</section>

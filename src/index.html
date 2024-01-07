@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GoodLuck</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/revolution-slider.css" rel="stylesheet">
+<link href="assets/css/flipclock.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet"> 
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link href="assets/css/bootstrap-margin-padding.css" rel="stylesheet">
+<link href="assets/css/responsive.css" rel="stylesheet">
+
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+</head>
+<body>
+
+  <div class="page-wrapper">
+   
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+ 
+
+  <app-root></app-root>
+
+  <!-- <app-footer></app-footer> -->
+  </div>
+</body>
+<script>
+  $( document ).ready(function() {
+    // alert($(location).attr('href'));
+
+    // var url = $(location).attr('href').split("/");
+    var url = $(location).attr('href'),
+    parts = url.split("/"),
+    last_part = parts[parts.length-1];
+    // alert( last_part );
+    if(last_part=='index' || last_part==''){
+     
+    } else{
+      $('.first-slide').css('display','none');
+      // $('.first-header').css('display','none');
+      // $('.header-top').css('display','none');
+    }
+});
+</script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/revolution.min.js"></script>
+<script src="assets/js/js-collection.js"></script>
+<script src="assets/js/flipclock.js"></script>
+<script src="assets/js/jquery-ui.min.js"></script>
+<script src="assets/js/script.js"></script>
+</html>
